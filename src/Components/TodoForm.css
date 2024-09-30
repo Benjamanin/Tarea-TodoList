@@ -1,0 +1,22 @@
+.pink-button {
+margin-left: auto;
+
+  }
+  .pink-button:hover {
+    background-color: rgb(239, 217, 221); /* Color rosado más oscuro al pasar el puntero */
+  }
+
+
+.AdicionTarea{
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.textinput{
+    width: 400px;
+}
+
+span.Completed {
+  text-decoration: line-through;
+  color: #ff00bb;
+}

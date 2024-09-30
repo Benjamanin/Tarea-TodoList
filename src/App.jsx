@@ -1,12 +1,15 @@
 import './App.css'
 import '@mantine/core/styles.css';
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider, Container, Title } from '@mantine/core';
+import TodoForm from './Components/TodoForm';
 
 function App() {
   return (
     <MantineProvider>
-      {/* Despues de haber clonado el proyecto, el siguiente paso es hacer el "cd nuevo-proyecto" , luego el "npm install"
-      y para asi podras ejecutar el "npm run dev" sin ningun problema*/}
+      <Container>
+        <Title order={1}>Todo List</Title>
+        <TodoForm/>
+      </Container>
     </MantineProvider>
   );
 }
