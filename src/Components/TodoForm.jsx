@@ -1,6 +1,7 @@
 import { TextInput, Button, Stack, Checkbox, Paper, Group} from "@mantine/core";
 import './TodoForm.css';
 import { useState } from 'react';
+import React from "react";
 
 export default function TodoForm() {
     const [Tarea, setTarea] = useState("");
@@ -31,10 +32,12 @@ export default function TodoForm() {
         newTodos.splice(index, 1);
         setListaTareas(newTodos);
     }
+
     return (
-        <form>
+        <form onSubmit={(e) => e.preventDefault()}>
            <Group className="AdicionTarea">
-                <TextInput  className="textinput" placeholder="Añade una tarea" value={Tarea} onChange={handleChange} />
+                <TextInput type="text" className="textinput" placeholder="Añade una tarea" 
+                value={Tarea} onChange={handleChange} />
                 <Button
                     variant="outline" 
                     color="green"
